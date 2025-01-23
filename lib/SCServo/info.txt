@@ -1,0 +1,20 @@
+﻿通信層:SCS
+----------------------------
+硬件接口層:SCSerial
+----------------------------
+應用層:SMS_STS SCSCL分別對應飛特三個系列舵機
+
+SMS_STS sms_sts;//定義SMSBL/SMSCL/STSCL系列舵機
+SCSCL sc;//定義SCSCL系列舵機
+
+INST.h---指令定義頭文件
+SCS.h/SCS.cpp---通信層程序
+SCSerial.h/SCSerial.cpp---硬件接口程序
+SMS_STS.h/SMS_STS.cpp---SMSBL/SMSCL/STSCL應用層程序
+SCSCL.h/SCSCL.cpp---SCSCL應用層程序
+(內存表定義於應用層程序頭文件SMS_STS.h\SCSCL.h中不同系列舵內存表定義存在差異)
+
+
+SCS類<---SCSerial類<---SMS_STS類/SCSCL類
+
+arduino使用Atmega2560測試
